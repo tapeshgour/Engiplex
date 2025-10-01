@@ -1,0 +1,295 @@
+/* General Body Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #f4f7fa;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Helper class to hide elements */
+.hidden {
+    display: none !important;
+}
+
+/* Login Popup Styles */
+#login-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.login-popup {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-popup h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.login-popup p {
+    margin-bottom: 25px;
+    color: #7f8c8d;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+#login-button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#login-button:hover {
+    background-color: #2980b9;
+}
+
+
+/* Main Content Styles */
+header {
+    background-color: #ffffff;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.logo-e {
+    background-color: #8e44ad;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 8px;
+    margin-right: 5px;
+}
+
+header nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+}
+
+header nav a:hover {
+    color: #3498db;
+}
+
+header nav a i {
+    margin-right: 5px;
+}
+
+.dashboard-container {
+    display: flex;
+    padding: 30px;
+    gap: 30px;
+}
+
+.sidebar {
+    flex: 0 0 250px; /* Do not grow, do not shrink, base width 250px */
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    height: fit-content;
+}
+
+.sidebar h3 {
+    margin-top: 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.sidebar button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: none;
+    background: #f9f9f9;
+    color: #333;
+    text-align: left;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.sidebar button i {
+    margin-right: 10px;
+    width: 20px; /* Align icons */
+}
+
+.sidebar button:hover {
+    background: #e9ecef;
+}
+
+.sidebar button.active {
+    background-color: #3498db;
+    color: white;
+}
+
+.content-area {
+    flex: 1;
+}
+
+#enquiries-section, #applications-section {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #eef2f7;
+    vertical-align: top;
+}
+
+thead th {
+    font-weight: 600;
+    color: #888;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-info strong {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.contact-info span {
+    font-size: 14px;
+    color: #666;
+}
+
+.status {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status.internship {
+    background-color: #e8dff5;
+    color: #8e44ad;
+}
+
+/* Show/Hide Password Icon */
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-wrapper input {
+    padding-right: 40px; /* Make space for the icon */
+}
+
+.password-wrapper i {
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+    color: #aaa;
+}
+
+/* ## NEW STYLES ADDED BELOW ## */
+
+/* Styling for Action Buttons in Tables */
+.action-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.action-btn i {
+    margin-right: 5px;
+}
+
+.open-doc-btn {
+    background-color: #3498db; /* Blue */
+}
+
+.open-doc-btn:hover {
+    background-color: #2980b9;
+}
+
+.delete-btn {
+    background-color: #e74c3c; /* Red */
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}

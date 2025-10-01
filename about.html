@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - ENGIPLEX</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./about.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navbar/Header -->
+  <header>
+    <div class="logo">
+      <img src="./WhatsApp Image 2025-09-23 at 20.38.59.jpeg" alt="Engiplex" class="logo-img">
+    </div>
+
+    <!-- Hamburger -->
+    <button class="hamburger">&#9776;</button>
+
+    <!-- Nav menu -->
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html" class="active">About</a></li>
+        <li><a href="./services.html">Services</a></li>
+        <li><a href="./career.html">Career</a></li>
+        <li><a href="./Enquiry.html">Enquiry</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="spacer"></div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1>About <br>ENGIPLEX</h1>
+        <p>ENGIPLEX, proprietorship firm delivers world-class engineering services with proven expertise in electronics, mechanical, electrical, software, digital marketing, project management, etc. Trusted by industry leaders for innovative engineering excellence.</p>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section-padded why-choose-us">
+      <div class="container">
+        <h2 class="section-title">Why Choose ENGIPLEX?</h2>
+        <p class="section-subtitle">Our commitment to excellence and innovation sets us apart in the engineering industry</p>
+
+        <div class="features-grid">
+          <div class="feature-card team">
+            <div class="card-icon"><i class="fas fa-medal"></i></div>
+            <h3>Expert Team</h3>
+            <p>10+ experienced engineers with diverse expertise across multiple domains</p>
+          </div>
+          <div class="feature-card quality">
+            <div class="card-icon"><i class="fas fa-bullseye"></i></div>
+            <h3>Quality Focus</h3>
+            <p>Rigorous quality assurance processes ensuring every project meets the highest standards</p>
+          </div>
+          <div class="feature-card delivery">
+            <div class="card-icon"><i class="fas fa-clock"></i></div>
+            <h3>Timely Delivery</h3>
+            <p>Commitment to delivering projects on time without compromising on quality or specifications</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission, Vision, Values -->
+    <section class="section-padded mvv-section">
+      <div class="container">
+        <div class="mvv-grid">
+          <div class="mvv-item mission">
+            <div class="item-icon"><i class="fas fa-bullseye"></i></div>
+            <h3>Our Mission</h3>
+            <p>To deliver innovative engineering solutions that drive technological advancement and sustainable business growth through cutting-edge technology and engineering excellence.</p>
+          </div>
+          <div class="mvv-item vision">
+            <div class="item-icon"><i class="fas fa-eye"></i></div>
+            <h3>Our Vision</h3>
+            <p>To be the leading engineering consultancy, transforming complex challenges into breakthrough solutions that shape the future of technology and industry.</p>
+          </div>
+          <div class="mvv-item values">
+            <div class="item-icon"><i class="fas fa-heart"></i></div>
+            <h3>Our Values</h3>
+            <div class="values-tags">
+              <span>Innovation</span>
+              <span>Quality Excellence</span>
+              <span>Integrity</span>
+              <span>Customer Focus</span>
+              <span>Sustainability</span>
+              <span>Collaboration</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 ENGIPLEX. All Rights Reserved.
+  </footer>
+
+  <!-- JS for navbar -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+    });
+
+    document.querySelectorAll('.nav-menu ul li a').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('show');
+      });
+    });
+
+    // Highlight active page dynamically
+    const currentPage = location.pathname.split("/").pop();
+    document.querySelectorAll('.nav-menu ul li a').forEach(link => {
+      if(link.getAttribute('href') === currentPage) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  </script>
+
+</body>
+</html>

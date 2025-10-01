@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Enquiry - ENGIPLEX</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./Enquiry.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navbar/Header -->
+  <header>
+    <div class="logo">
+      <img src="./WhatsApp Image 2025-09-23 at 20.38.59.jpeg" alt="Engiplex" class="logo-img">
+    </div>
+
+    <!-- Hamburger -->
+    <button class="hamburger">&#9776;</button>
+
+    <!-- Nav menu -->
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./services.html">Services</a></li>
+        <li><a href="./career.html">Career</a></li>
+        <li><a href="./Enquiry.html" class="active">Enquiry</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="spacer"></div>
+
+  <main class="container">
+    <div class="enquiry-form-container">
+      <div class="form-header">
+        <h2>Submit Your Project Enquiry</h2>
+        <p>We're excited to hear about your project. Please fill out the form below and we'll get back to you shortly.</p>
+      </div>
+      
+      <form id="enquiry-form">
+        <div class="form-group">
+          <label for="name"><i class="fas fa-user"></i> Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone"><i class="fas fa-phone"></i> Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="Enter your 10-digit mobile number">
+        </div>
+
+        <div class="form-group">
+          <label for="project-details"><i class="fas fa-lightbulb"></i> Project Details</label>
+          <textarea id="project-details" name="project-details" rows="5" placeholder="Describe your project, requirements, and goals..." required></textarea>
+        </div>
+
+        <button type="submit">Submit Enquiry</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 ENGIPLEX. All Rights Reserved.
+  </footer>
+
+  <!-- JS for navbar -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+    });
+
+    document.querySelectorAll('.nav-menu ul li a').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('show');
+      });
+    });
+
+    // Highlight active page dynamically
+    const currentPage = location.pathname.split("/").pop();
+    document.querySelectorAll('.nav-menu ul li a').forEach(link => {
+      if(link.getAttribute('href') === currentPage) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  </script>
+
+  <!-- Firebase SDKs -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+    import { getFirestore, collection, addDoc, getDocs, doc, deleteDoc } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyAjQ0sYW7w8sXJJsRxag8t1bIzxQytwEjc",
+      authDomain: "engiplex-web.firebaseapp.com",
+      projectId: "engiplex-web",
+      storageBucket: "engiplex-web.firebasestorage.app",
+      messagingSenderId: "426410116767",
+      appId: "1:426410116767:web:e452d955613eee2bbbc4aa",
+      measurementId: "G-X72WK6C1ED"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    window.db = db;
+    window.collection = collection;
+    window.addDoc = addDoc;
+    window.getDocs = getDocs;
+    window.doc = doc;
+    window.deleteDoc = deleteDoc;
+  </script>
+
+  <script src="./Enquiry.js"></script>
+</body>
+</html>

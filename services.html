@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services - ENGIPLEX</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./services.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navbar/Header -->
+  <header>
+    <div class="logo">
+      <img src="./WhatsApp Image 2025-09-23 at 20.38.59.jpeg" alt="Engiplex" class="logo-img">
+    </div>
+
+    <!-- Hamburger -->
+    <button class="hamburger">&#9776;</button>
+
+    <!-- Nav menu -->
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./services.html" class="active">Services</a></li>
+        <li><a href="./career.html">Career</a></li>
+        <li><a href="./Enquiry.html">Enquiry</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="spacer"></div>
+
+  <main class="container">
+    <div class="page-header">
+      <h1>Our Professional Services</h1>
+      <p>We offer a wide range of expert engineering and software solutions.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card vlsi">
+        <div class="card-icon"><i class="fas fa-bolt"></i></div>
+        <h3>Electronics Engineering</h3>
+        <p>Embedded systems, IoT devices, PCB design, power electronics, automation solutions, and electronic product development using advanced technologies</p>
+        <div class="card-footer">
+          <a href="./Enquiry.html">Get Quote <i class="fas fa-arrow-right"></i></a>
+          <span>Professional Service</span>
+        </div>
+      </div>
+
+      <div class="service-card mechanical">
+        <div class="card-icon"><i class="fas fa-cogs"></i></div>
+        <h3>Mechanical Engineering</h3>
+        <p>Comprehensive mechanical design, analysis, and manufacturing solutions including CAD/CAM, FEA, and thermal analysis.</p>
+        <div class="card-footer">
+          <a href="./Enquiry.html">Get Quote <i class="fas fa-arrow-right"></i></a>
+          <span>Professional Service</span>
+        </div>
+      </div>
+
+      <div class="service-card electrical">
+        <div class="card-icon"><i class="fas fa-bolt-lightning"></i></div>
+        <h3>Electrical Engineering</h3>
+        <p>Complete electrical system design, power electronics, control systems, automation, and embedded systems development.</p>
+        <div class="card-footer">
+          <a href="./Enquiry.html">Get Quote <i class="fas fa-arrow-right"></i></a>
+          <span>Professional Service</span>
+        </div>
+      </div>
+
+      <div class="service-card software">
+        <div class="card-icon"><i class="fas fa-code"></i></div>
+        <h3>Software Development</h3>
+        <p>Custom software solutions, web applications, mobile apps, and enterprise systems using cutting-edge technologies.</p>
+        <div class="card-footer">
+          <a href="./Enquiry.html">Get Quote <i class="fas fa-arrow-right"></i></a>
+          <span>Professional Service</span>
+        </div>
+      </div>
+
+      <div class="service-card project-management">
+        <div class="card-icon"><i class="fas fa-clipboard-check"></i></div>
+        <h3>Project Management</h3>
+        <p>End-to-end project management including planning, execution, and monitoring to ensure projects are completed on time and within budget.</p>
+        <div class="card-footer">
+          <a href="./Enquiry.html">Get Quote <i class="fas fa-arrow-right"></i></a>
+          <span>Professional Service</span>
+        </div>
+      </div>
+
+      <div class="service-card digital-marketing">
+        <div class="card-icon"><i class="fas fa-bullhorn"></i></div>
+        <h3>Digital Marketing</h3>
+        <p>End-to-end marketing services including strategy, planning, execution, and monitoring to maximize ROI.</p>
+        <div class="card-footer">
+          <a href="./Enquiry.html">Get Quote <i class="fas fa-arrow-right"></i></a>
+          <span>Professional Service</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 ENGIPLEX. All Rights Reserved.
+  </footer>
+
+  <!-- JS for navbar -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+    });
+
+    document.querySelectorAll('.nav-menu ul li a').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('show');
+      });
+    });
+
+    // Highlight active page dynamically
+    const currentPage = location.pathname.split("/").pop();
+    document.querySelectorAll('.nav-menu ul li a').forEach(link => {
+      if(link.getAttribute('href') === currentPage) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  </script>
+
+</body>
+</html>

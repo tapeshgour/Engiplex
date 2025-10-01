@@ -1,0 +1,318 @@
+/* General Body Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #f4f7fa;
+    color: #333;
+}
+
+/* Header Styles (Consistent with other pages) */
+header {
+    background-color: #ffffff;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.logo-e {
+    background-color: #8e44ad;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 8px;
+    margin-right: 5px;
+}
+
+header nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover, header nav a.active {
+    color: #3498db;
+}
+
+header nav a i {
+    margin-right: 5px;
+}
+
+/* Main Content & Container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.section-padded {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('./backgroung.jpeg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 450px; /* Adjust as needed */
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin: 0;
+    line-height: 1.1;
+}
+
+.hero-content h1 br {
+    display: none; /* Hide line break on larger screens if desired, or adjust as needed */
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 20px auto 0 auto;
+    line-height: 1.6;
+}
+
+/* Why Choose Us Features Grid */
+.why-choose-us {
+    background-color: #fcfdff;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.feature-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    border-top: 5px solid;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 45px rgba(0, 225, 255, 0.15);
+}
+
+.feature-card .card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px auto;
+}
+
+.feature-card .card-icon i {
+    color: #fff;
+    font-size: 24px;
+}
+
+.feature-card h3 {
+    font-size: 1.4rem;
+    margin: 0 0 10px 0;
+    color: #2c3e50;
+}
+
+.feature-card p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Feature Card Colors */
+.feature-card.team { border-color: #5d69f3; }
+.feature-card.team .card-icon { background-color: #5d69f3; }
+
+.feature-card.quality { border-color: #8e44ad; }
+.feature-card.quality .card-icon { background-color: #8e44ad; }
+
+.feature-card.delivery { border-color: #27ae60; }
+.feature-card.delivery .card-icon { background-color: #27ae60; }
+
+
+/* Mission, Vision, Values Section */
+.mvv-section {
+    background-color: #ffffff;
+}
+
+.mvv-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.mvv-item {
+    background: #fdfdff;
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid #eee;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mvv-item .item-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    background-color: #ebf5ff; /* Light blue base */
+    border: 1px solid #d0e7fb;
+}
+
+.mvv-item .item-icon i {
+    font-size: 30px;
+    color: #3498db; /* Default icon color */
+}
+
+/* Specific icon colors for MVV */
+.mvv-item.mission .item-icon i { color: #5d69f3; } /* Matches team */
+.mvv-item.vision .item-icon i { color: #8e44ad; } /* Matches quality */
+.mvv-item.values .item-icon i { color: #27ae60; } /* Matches delivery */
+
+
+.mvv-item h3 {
+    font-size: 1.6rem;
+    margin: 0 0 15px 0;
+    color: #2c3e50;
+}
+
+.mvv-item p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.values-tags {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.values-tags span {
+    background-color: #e0e7ed;
+    color: #555;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Achievements Section */
+.achievements-section {
+    background-color: #fcfdff;
+}
+
+
+/* Footer (Consistent with other pages) */
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #888;
+    font-size: 14px;
+    background-color: #ffffff;
+    border-top: 1px solid #eee;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    .features-grid, .mvv-grid {
+        grid-template-columns: 1fr; /* Stack cards in a single column */
+    }
+    .mvv-section .container {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    header nav {
+        display: none; /* Hide navigation on small screens */
+    }
+    .hero-section {
+        padding: 80px 15px;
+        min-height: 350px;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .hero-content p {
+        font-size: 1rem;
+    }
+    .section-padded {
+        padding: 60px 0;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
+    .section-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 30px;
+    }
+    .feature-card, .mvv-item {
+        padding: 25px;
+    }
+    .feature-card h3, .mvv-item h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+}
