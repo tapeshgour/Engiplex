@@ -106,7 +106,7 @@ header nav a i {
 }
 
 .card-icon i {
-    color: #fff;
+    color: #000000;
     font-size: 24px;
 }
 
@@ -150,6 +150,7 @@ header nav a i {
     --elec-color: #27ae60;
     --soft-color: #e67e22;
     --proj-color: #e74c3c;
+    --digi-color: #bac70d;
 }
 
 .service-card.vlsi { border-color: var(--vlsi-color); }
@@ -166,6 +167,9 @@ header nav a i {
 
 .service-card.project-management { border-color: var(--proj-color); }
 .service-card.project-management .card-icon { background-color: var(--proj-color); }
+
+.service-card.digital-marketing{ border-color: var(--digi-color);}
+.service-card.digital-marketing .card-icon{ background-color: var(--digi-color); }
 
 
 /* Responsive Design for smaller screens */
