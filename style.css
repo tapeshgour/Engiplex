@@ -95,7 +95,7 @@ header .logo img {
   padding: 100px 10% 120px;
   text-align: center;
   color: white;
-  background-image: url(./Gemini_Generated_Image_7ctzi47ctzi47ctz.png);
+  background-image: url(./Gemini_Generated_Image_7ctzi47ctzi47ctz\ \(1\).png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -545,3 +545,4 @@ RESPONSIVE HEADER
     grid-template-columns: 1fr;
   }
 }
+
